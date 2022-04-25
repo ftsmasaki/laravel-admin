@@ -17,4 +17,7 @@ Route::group([
     //Product
     $router->resource('/products', ProductController::class);
 
+    //License
+    $router->resource('/licenses', LicenseController::class);
+
 });
