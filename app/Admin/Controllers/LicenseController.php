@@ -7,6 +7,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use App\Models\Product;//追記
 
 class LicenseController extends AdminController
 {
@@ -27,7 +28,9 @@ class LicenseController extends AdminController
         $grid = new Grid(new License());
 
         $grid->column('id', __('Id'));
-        $grid->column('product_id', __('Product id'));
+        
+        //リレーション　製品名を表示
+        $grid->product()->product_name();
         $grid->column('product_key', __('Product key'));
         $grid->column('expire_date', __('Expire date'));
         $grid->column('purchase_date', __('Purchase date'));
@@ -71,7 +74,10 @@ class LicenseController extends AdminController
     {
         $form = new Form(new License());
 
-        $form->number('product_id', __('Product id'));
+        //製品名を選択するセレクトボックス
+        //Productとリレーションさせて、製品名を選択するとidを取得する
+        $form->select('product_id', __('Product name'))->options(Product::all()->pluck('product_name','id'));
+
         $form->text('product_key', __('Product key'));
         $form->date('expire_date', __('Expire date'))->default(date('Y-m-d'));
         $form->date('purchase_date', __('Purchase date'))->default(date('Y-m-d'));
