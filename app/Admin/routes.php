@@ -11,6 +11,10 @@ Route::group([
     'as'            => config('admin.route.prefix') . '.',
 ], function (Router $router) {
 
+    //デフォルト設定
     $router->get('/', 'HomeController@index')->name('home');
+
+    //Product
+    $router->resource('/products', ProductController::class);
 
 });
