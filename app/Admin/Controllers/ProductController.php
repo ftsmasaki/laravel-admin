@@ -28,8 +28,8 @@ class ProductController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('product_name', __('Product name'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        //$grid->column('created_at', __('Created at'));
+        //$grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }

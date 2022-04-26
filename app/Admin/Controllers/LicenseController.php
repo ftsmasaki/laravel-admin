@@ -34,10 +34,10 @@ class LicenseController extends AdminController
         $grid->column('product_key', __('Product key'));
         $grid->column('expire_date', __('Expire date'));
         $grid->column('purchase_date', __('Purchase date'));
-        $grid->column('is_notify', __('Is notify'));
+        $grid->column('is_notify', __('Is notify'))->bool();
         $grid->column('seats', __('Seats'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        //$grid->column('created_at', __('Created at'));
+        //$grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }
