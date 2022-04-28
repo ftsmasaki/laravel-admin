@@ -14,8 +14,8 @@ class License extends Model
         return $this->belongsTo(Product::class);
     }
 
-    public function LicenseAssignment()
+    public function LicenseAssignments()
     {
-        return $this->hasOne(LicenseAssignment::class);
+        return $this->hasMany(LicenseAssignment::class);
     }
 }

@@ -3,10 +3,15 @@
 namespace App\Admin\Controllers;
 
 use App\Models\LicenseAssignment;
+use App\Models\License; //追記
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use App\Admin\Selectable\Users; //追記
+
+//test
+use App\Models\User;
 
 class LicenseAssignmentController extends AdminController
 {

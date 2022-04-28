@@ -14,8 +14,8 @@ class Asset extends Model
         return $this->belongsTo(Customer::class);
     }
 
-    public function LicenseAssignment()
+    public function LicenseAssignments()
     {
-        return $this->hasOne(LicenseAssignment::class);
+        return $this->hasMany(LicenseAssignment::class);
     }
 }

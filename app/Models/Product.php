@@ -9,8 +9,8 @@ class Product extends Model
 {
     use HasFactory;
 
-    public function License()
+    public function Licenses()
     {
-        return $this->hasOne(License::class);
+        return $this->hasMany(License::class);
     }
 }

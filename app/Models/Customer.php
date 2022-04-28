@@ -9,8 +9,8 @@ class Customer extends Model
 {
     use HasFactory;
 
-    public function Asset()
+    public function Assets()
     {
-        return $this->hasOne(Asset::class);
+        return $this->hasMany(Asset::class);
     }
 }
