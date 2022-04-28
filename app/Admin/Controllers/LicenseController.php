@@ -3,7 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Models\License;
-use App\Models\Product;//追記
+use App\Models\Product; //追記
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -30,7 +30,7 @@ class LicenseController extends AdminController
         $grid->column('id', __('Id'));
         
         //リレーション　製品名を表示
-        $grid->product()->product_name();
+        $grid->product()->product_name(__('Product name'));
         $grid->column('product_key', __('Product key'));
         $grid->column('expire_date', __('Expire date'));
         $grid->column('purchase_date', __('Purchase date'));
