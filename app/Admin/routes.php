@@ -16,8 +16,12 @@ Route::group([
 
     //Product
     $router->resource('/products', ProductController::class);
-
     //License
     $router->resource('/licenses', LicenseController::class);
+
+    //Customer
+    $router->resource('/customers', CustomerController::class);
+    //Asset
+    $router->resource('/assets', AssetController::class);
 
 });

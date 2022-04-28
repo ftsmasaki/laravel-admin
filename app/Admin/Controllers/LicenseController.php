@@ -3,11 +3,11 @@
 namespace App\Admin\Controllers;
 
 use App\Models\License;
+use App\Models\Product;//追記
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
-use App\Models\Product;//追記
 
 class LicenseController extends AdminController
 {
