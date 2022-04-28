@@ -9,8 +9,13 @@ class Asset extends Model
 {
     use HasFactory;
 
-    public function customer()
+    public function Customer()
     {
         return $this->belongsTo(Customer::class);
+    }
+
+    public function LicenseAssignment()
+    {
+        return $this->hasOne(LicenseAssignment::class);
     }
 }

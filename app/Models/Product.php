@@ -9,7 +9,7 @@ class Product extends Model
 {
     use HasFactory;
 
-    public function license()
+    public function License()
     {
         return $this->hasOne(License::class);
     }

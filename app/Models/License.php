@@ -9,8 +9,13 @@ class License extends Model
 {
     use HasFactory;
 
-    public function product()
+    public function Product()
     {
         return $this->belongsTo(Product::class);
+    }
+
+    public function LicenseAssignment()
+    {
+        return $this->hasOne(LicenseAssignment::class);
     }
 }

@@ -30,7 +30,7 @@ class AssetController extends AdminController
         $grid->column('id', __('Id'));
         //$grid->column('customer_id', __('Customer id'));
         //リレーション　顧客名を表示
-        $grid->customer()->customer_name(__('Customer name'));
+        $grid->Customer()->customer_name(__('Customer name'));
         $grid->column('asset_name', __('Asset name'));
         $grid->column('asset_user_name', __('Asset user name'));
         //$grid->column('created_at', __('Created at'));

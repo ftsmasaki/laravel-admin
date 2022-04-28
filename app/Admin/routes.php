@@ -24,4 +24,7 @@ Route::group([
     //Asset
     $router->resource('/assets', AssetController::class);
 
+    //LicenseAssignment
+    $router->resource('/license_assignments', LicenseAssignmentController::class);
+
 });
